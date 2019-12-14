@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
+ class Navbar extends Component {
+    // Constructor(){
+    //     console.log(123)
+    // }
 
-export class Navbar extends Component {
     static defaultProps = {
         title: 'Github finder'
     }
@@ -13,9 +16,9 @@ export class Navbar extends Component {
 
     render() {
         return (
-            <navbar className="navbar bg-primary">
+            <nav className="navbar bg-primary">          
                 <h2>{this.props.title}</h2>
-            </navbar>
+            </nav>
         )
     }
 }
