@@ -3,6 +3,7 @@ import Navbar from './component/layout/Navbar';
 import Users from './component/user/Users';
 import Spinner from './component/layout/Spinner'
 import Search from './component/user/Search'
+import Alert from './component/user/Alert'
 import axios from 'axios';
 import './App.css';
 
@@ -47,10 +48,13 @@ class App extends Component {
       <React.Fragment>
         <Navbar title='Find with Github'/>
         <div className="container">
+        <Alert/>
         <Search searchUsers={this.searchUsers} 
         clearUsers={this.clearUsers}
         showClear={users.length> 0? true : false}/>
+
         <Users loading = {loading}  users = {users}/>
+        
         </div>  
       </React.Fragment>
     );
